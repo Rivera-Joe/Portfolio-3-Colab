@@ -1,8 +1,8 @@
 <!DOCTYPE htmL>
 <html>
 <head>
-<link rel="stylesheet" href="../css/RetroHome.css">
 <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/RetroHome.css">
 <title>Good Games</title>
 
 </head>
@@ -17,7 +17,7 @@
 </div>
 <P><br /><br /></P>
 
-<div style="background-image: url('../images/grey-white-background.jpg'); width: 90%; margin: auto;">
+<div style="background-image: url('../images/grey-white-background.jpg'); width: 90%; margin: auto; margin-bottom: 20px;">
 <h1 style="text-align: center; padding: 0.4em; margin-top: -0.7em;">Deal Of The Day!</h1>
 
 <div class="slideshowbg">
@@ -59,7 +59,7 @@
 </div> <!-- End of slideshow background div-->
 
 <p><br /><br /></p>
-<h1 style="text-align: left;">Genre:</h1>
+<h1 style="text-align: left; padding: 20px;">Genre:</h1>
 <!-- Start of Genre div -->
 <div style=" border-left-style: none; border-right-style: none; border-top-style: solid; border-bottom-style: solid; border-width: 3px; height: 270px;">
 <p><br /></p>
@@ -78,39 +78,31 @@
 
 </div>
 
+<p><br /><br /></p>
+<h1 style="text-align: left; padding: 20px;">Ratings:</h1>
+<!-- Start of Rating div -->
+<div style=" border-left-style: none; border-right-style: none; border-top-style: solid; border-bottom-style: solid; border-width: 3px; height: 300px;">
+<p><br /></p>
+
+<div class="RPG" style="background-image: url('../images/Donkey-Kong-64-2.jpg'); background-repeat: no-repeat; background-size: cover; margin-left: 20px;">
+</div>
+<p style="color: #00008b; text-decoration: none; font-size: 16pt; position: relative; display: inline; top: 75%; right: 38%;"><q>8.9</q></p>
+<p style="color: #000000; text-decoration: none; font-size: 16pt; position: relative; display: inline; top: 83%; right: 44%;">GOG Weekly</p>
+
+<div class="Adventure" style="background-image: url('../images/sonic-adventure.jpg'); background-repeat: no-repeat; background-size: cover;">
+</div>
+<p style="color: #00008b; text-decoration: none; font-size: 16pt; position: relative; top: 75%; right: 16%; display: inline;"><q>9.2</q></p>
+<p style="color: #000000; text-decoration: none; font-size: 16pt; position: relative; top: 83%; right: 22%; display: inline;">Gamer Magazine</p>
+
+<div class="Platformer" style="background-image: url('../images/Mario.jpg'); background-repeat: no-repeat; background-size: cover;">
+</div>
+<p style="color: #00008b; text-decoration: none; font-size: 16pt; position: relative; top: 75%; left: 3%; display: inline;"><q>10/10</q></p>
+<p style="color: #000000; text-decoration: none; font-size: 16pt; position: relative; top: 83%; right: 4%; display: inline;">Nintendo Power</p>
+</div>
+
 </div> <!-- End of page background div -->
-<script>
+<script src="../javascript/Home.js"></script>
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-</script>
 
 </body>
 </html>
