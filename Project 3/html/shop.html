@@ -27,6 +27,77 @@
 
 <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 
+
+<script>
+    
+    function showShop(_clickedElement){
+
+            //hide grid and show shop window
+            $('#grid').hide(1000);
+            $('#shopWindow').show(1000);
+
+            //display the correct window depending on which element was clicked
+            switch(_clickedElement){
+
+            //Genesis shop
+            case 'Genesis':
+
+            //show Genesis 
+            $('#Genesis-shop').show();
+            //hide all but Genesis
+            $('#n64-shop').hide();
+            $('#SNES-shop').hide();
+            $('#dreamCast-shop').hide();
+            break;
+
+            //Nintendo 64 shop
+            case 'n64':
+
+            //show n64 shop
+            $('#n64-shop').show();
+
+            //hide all but n64
+            $('#Genesis-shop').hide();
+            $('#SNES-shop').hide();
+            $('#dreamCast-shop').hide();
+            break;
+
+            //Super Nintendo shop
+            case 'SNES':
+
+            //show snes
+            $('#SNES-shop').show();
+
+            //hide all but SNES
+            $('#n64-shop').hide();
+            $('#Genesis-shop').hide();
+            $('#dreamCast-shop').hide();
+            break;
+
+            //Dreamcast shop
+            case 'DreamCast':
+
+            //show dreamcast
+            $('#dreamCast-shop').show();
+
+            //hide all but Dreamcast
+            $('#n64-shop').hide();
+            $('#SNES-shop').hide();
+            $('#Genesis-shop').hide();
+            break;
+
+            default:
+                location.href='shop.html';
+            break;
+        
+            }
+
+     $('nav').css('visibility','visible');
+
+    }
+
+</script>
+
 </head>
 <body>
         <!-- infamous head section  -->
@@ -45,16 +116,16 @@
 
         <!-- nav bar on left  -->
         <nav id="nav">
-            <div id="Genesis-nav">
+            <div id="Genesis-nav" onclick='showShop("Genesis")'>
                 Genesis
             </div>
-            <div id="n64-nav">
+            <div id="n64-nav" onclick='showShop("n64")'>
                 Nintendo 64
             </div>
-            <div id="SNES-nav">
+            <div id="SNES-nav" onclick='showShop("SNES")'>
                 Super Nintendo
             </div>
-            <div id="dreamCast-nav">
+            <div id="dreamCast-nav" onclick='showShop("DreamCast")'>
                 DreamCast
             </div> 
 
@@ -70,13 +141,13 @@
                 </tr>
 
                 <tr>
-                    <td id="Genesis-grid">
+                    <td id="Genesis-grid" onclick='showShop("Genesis")'>
                         <figure>
                             <img src="../images/genesis.jpg" alt="Sega Genesis"/>
                         </figure>
                     </td>
 
-                    <td id="n64-grid">
+                    <td id="n64-grid" onclick='showShop("n64")'>
                         <figure>
                             <img src="../images/n64.jpg" alt="Nintendo 64"/>
                         </figure>
@@ -85,13 +156,13 @@
                 </tr>
 
                 <tr>
-                    <td id="SNES-grid">
+                    <td id="SNES-grid" onclick='showShop("SNES")'>
                         <figure>
                             <img src="../images/snes.jpg" alt="Super Nintendo"/>
                         </figure>
                     </td>
 
-                    <td id="dreamCast-grid">
+                    <td id="dreamCast-grid" onclick='showShop("DreamCast")'>
                         <figure>
                             <img src="../images/dreamCast.webp" alt="DreamCast"/>
                         </figure>
@@ -101,10 +172,48 @@
             </table>
 
             <div id="shopWindow">
-                <section id="Genesis-shop">genesis</section>
-                <section id="n64-shop">n64</section>
-                <section id="SNES-shop">snes</section>
-                <section id="dreamCast-shop">dreamcast</section>
+                <section id="Genesis-shop">
+
+                    <div class="shopWrapper">
+                        <div class="gameBox">Genesis Game 1</div>
+
+                        <div class="gameBox">Genesis Game 2</div>
+
+                        <div class="gameBox">Genesis Game 3</div>
+                    </div>
+                </section>
+
+                <section id="n64-shop">
+                   <div class="shopWrapper">
+                        <div class="gameBox">N64 Game 1</div>
+        
+                        <div class="gameBox">N64 Game 2</div>
+       
+                        <div class="gameBox">N64 Game 3</div>
+                    </div>
+                </section>
+                
+                <section id="SNES-shop">
+            
+                    <div class="shopWrapper">
+                        <div class="gameBox">SNES Game 1</div>
+        
+                        <div class="gameBox">SNES Game 2</div>
+        
+                        <div class="gameBox">SNES Game 3</div>
+                    </div>
+                </section>
+
+                <section id="dreamCast-shop">
+            
+                    <div class="shopWrapper">
+                        <div class="gameBox">Dreamcast Game 1</div>
+        
+                        <div class="gameBox">Dreamcast Game 2</div>
+        
+                        <div class="gameBox">Dreamcast Game 3</div>
+                    </div>
+                </section>
             </div>
 
 
@@ -129,60 +238,60 @@
 
 $(function(){
 
-    // show genesis shop 
-    $('#Genesis-grid').click(function(){
+    // // show genesis shop 
+    // $('#Genesis-grid').click(function(){
 
     
-        $('#grid').toggle(1000);
-        $('#shopWindow').toggle(1000);
-        $('#n64-shop').toggle();
-        $('#SNES-shop').toggle();
-        $('#dreamCast-shop').toggle();
+    //     $('#grid').toggle(1000);
+    //     $('#shopWindow').toggle(1000);
+    //     $('#n64-shop').toggle();
+    //     $('#SNES-shop').toggle();
+    //     $('#dreamCast-shop').toggle();
 
-        $('nav').css('visibility','visible');
-    })
-
-
-    // show n64 shop 
-    $('#n64-grid').click(function(){
-
-    
-        $('#grid').toggle(1000);
-        $('#shopWindow').toggle(1000);
-        $('#Genesis-shop').toggle();
-        $('#SNES-shop').toggle();
-        $('#dreamCast-shop').toggle();
-
-        $('nav').css('visibility','visible');
-    })
+    //     $('nav').css('visibility','visible');
+    // })
 
 
-    // show SNES shop 
-    $('#SNES-grid').click(function(){
+    // // show n64 shop 
+    // $('#n64-grid').click(function(){
 
     
-        $('#grid').toggle(1000);
-        $('#shopWindow').toggle(1000);
-        $('#n64-shop').toggle();
-        $('#Genesis-shop').toggle();
-        $('#dreamCast-shop').toggle();
+    //     $('#grid').toggle(1000);
+    //     $('#shopWindow').toggle(1000);
+    //     $('#Genesis-shop').toggle();
+    //     $('#SNES-shop').toggle();
+    //     $('#dreamCast-shop').toggle();
 
-        $('nav').css('visibility','visible');
-    })
+    //     $('nav').css('visibility','visible');
+    // })
 
 
-    // show dreamCast shop 
-    $('#dreamCast-grid').click(function(){
+    // // show SNES shop 
+    // $('#SNES-grid').click(function(){
 
     
-        $('#grid').toggle(1000);
-        $('#shopWindow').toggle(1000);
-        $('#n64-shop').toggle();
-        $('#SNES-shop').toggle();
-        $('#Genesis-shop').toggle();
+    //     $('#grid').toggle(1000);
+    //     $('#shopWindow').toggle(1000);
+    //     $('#n64-shop').toggle();
+    //     $('#Genesis-shop').toggle();
+    //     $('#dreamCast-shop').toggle();
 
-        $('nav').css('visibility','visible');
-    })
+    //     $('nav').css('visibility','visible');
+    // })
+
+
+    // // show dreamCast shop 
+    // $('#dreamCast-grid').click(function(){
+
+    
+    //     $('#grid').toggle(1000);
+    //     $('#shopWindow').toggle(1000);
+    //     $('#n64-shop').toggle();
+    //     $('#SNES-shop').toggle();
+    //     $('#Genesis-shop').toggle();
+
+    //     $('nav').css('visibility','visible');
+    // })
 
 
 

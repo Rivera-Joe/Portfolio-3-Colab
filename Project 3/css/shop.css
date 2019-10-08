@@ -9,22 +9,27 @@ body{
     justify-content: space-evenly;
 }
 
-nav{
+#nav{
     flex: 1;
-    background-color: #ff0000;
-    border: .3em solid #000000;
+    background-color: #000000;
+    border: .3em solid #ff0000;
     margin-top: 7em;
     margin-left: .5em;
     margin-right: .5em;
  
 }
 
-nav > div{
+#nav > div{
     background-color: #000000;
     color: #ffffff;
     height: 6em;
     text-align: center;
+    padding-top: 15%;
 
+}
+
+#nav > div:hover{
+    background-color: #cf4c4c;
 }
 aside{
     flex: 1;
@@ -72,4 +77,20 @@ img{
 #shopWindow{
     flex: 2;
     margin-top: 7em;
+}
+
+.shopWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.gameBox{
+    padding: 1em;
+}
+
+.gameBox:nth-child(2){
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
 }
