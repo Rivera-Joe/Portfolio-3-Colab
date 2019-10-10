@@ -29,7 +29,7 @@
 
 
 <script>
-    
+
     function showShop(_clickedElement){
 
             //hide grid and show shop window
@@ -42,7 +42,7 @@
             //Genesis shop
             case 'Genesis':
 
-            //show Genesis 
+            //show Genesis
             $('#Genesis-shop').show();
             //hide all but Genesis
             $('#n64-shop').hide();
@@ -89,7 +89,7 @@
             default:
                 location.href='shop.html';
             break;
-        
+
             }
 
      $('nav').css('visibility','visible');
@@ -127,12 +127,12 @@
             </div>
             <div id="dreamCast-nav" onclick='showShop("DreamCast")'>
                 DreamCast
-            </div> 
+            </div>
 
 
         </nav>
 
-            
+
 
             <!-- console table in middle of page  -->
             <table id="grid">
@@ -175,7 +175,8 @@
                 <section id="Genesis-shop">
 
                     <div class="shopWrapper">
-                        <div class="gameBox">Genesis Game 1</div>
+                        <div class="gameBox">
+                          Genesis Game 1</div>
 
                         <div class="gameBox">Genesis Game 2</div>
 
@@ -185,32 +186,52 @@
 
                 <section id="n64-shop">
                    <div class="shopWrapper">
-                        <div class="gameBox">N64 Game 1</div>
-        
-                        <div class="gameBox">N64 Game 2</div>
-       
-                        <div class="gameBox">N64 Game 3</div>
+                        <div class="gameBox">
+                            <figure>
+                              <img src="../images/DK64Large.jpg" alt="Donkey Kong Game"/>
+                              <figcaption>Donkey Kong 64</figcaption>
+                          </figure>
+                          <button>Add To Cart</button>
+                          
+                        </div>
+
+                        <div class="gameBox">
+                            <figure>
+                                <img src="../images/starFox64.jpg" alt="Star Fox 64 Game"/>
+                                <figcaption>Star Fox 64</figcaption>
+                            </figure>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="gameBox">
+                                <figure>
+                                    <img src="../images/goldenEye64.jpg" alt="Golden Eye 64 Game"/>
+                                    <figcaption>Golden Eye 64</figcaption>
+                                </figure>
+                                <button>Add To Cart</button>
+                            </div>
+
                     </div>
                 </section>
-                
+
                 <section id="SNES-shop">
-            
+
                     <div class="shopWrapper">
                         <div class="gameBox">SNES Game 1</div>
-        
+
                         <div class="gameBox">SNES Game 2</div>
-        
+
                         <div class="gameBox">SNES Game 3</div>
                     </div>
                 </section>
 
                 <section id="dreamCast-shop">
-            
+
                     <div class="shopWrapper">
                         <div class="gameBox">Dreamcast Game 1</div>
-        
+
                         <div class="gameBox">Dreamcast Game 2</div>
-        
+
                         <div class="gameBox">Dreamcast Game 3</div>
                     </div>
                 </section>
@@ -225,23 +246,23 @@
     </div>
 
 
-    
+
 </body>
 
 <script>
 
 
-    // hide navbar at page opening 
+    // hide navbar at page opening
     $('#nav').css('visibility', 'hidden');
     $('#shopWindow').hide();
 
 
 $(function(){
 
-    // // show genesis shop 
+    // // show genesis shop
     // $('#Genesis-grid').click(function(){
 
-    
+
     //     $('#grid').toggle(1000);
     //     $('#shopWindow').toggle(1000);
     //     $('#n64-shop').toggle();
@@ -252,10 +273,10 @@ $(function(){
     // })
 
 
-    // // show n64 shop 
+    // // show n64 shop
     // $('#n64-grid').click(function(){
 
-    
+
     //     $('#grid').toggle(1000);
     //     $('#shopWindow').toggle(1000);
     //     $('#Genesis-shop').toggle();
@@ -266,10 +287,10 @@ $(function(){
     // })
 
 
-    // // show SNES shop 
+    // // show SNES shop
     // $('#SNES-grid').click(function(){
 
-    
+
     //     $('#grid').toggle(1000);
     //     $('#shopWindow').toggle(1000);
     //     $('#n64-shop').toggle();
@@ -280,10 +301,10 @@ $(function(){
     // })
 
 
-    // // show dreamCast shop 
+    // // show dreamCast shop
     // $('#dreamCast-grid').click(function(){
 
-    
+
     //     $('#grid').toggle(1000);
     //     $('#shopWindow').toggle(1000);
     //     $('#n64-shop').toggle();

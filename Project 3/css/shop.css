@@ -16,7 +16,7 @@ body{
     margin-top: 7em;
     margin-left: .5em;
     margin-right: .5em;
- 
+
 }
 
 #nav > div{
@@ -65,13 +65,18 @@ aside{
     width: 50%;
 }
 
+#grid td:hover{
+  cursor: pointer;
+}
+
 
 /* images of consoles within the table  */
-img{
+#grid img{
     max-width: 60%;
     height: 15em;
     margin-left: 20%;
 }
+
 
 /* shopping window  */
 #shopWindow{
@@ -79,6 +84,29 @@ img{
     margin-top: 7em;
 }
 
+
+#shopWindow figure{
+  height: 80%;
+  
+}
+
+/*individual game box */
+#shopWindow img{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 60%;
+}
+
+    /* game name text  */
+#shopWindow figcaption{
+  margin-left: 20%;
+  width: 60%;
+  text-align: center;
+}
+
+    /* shop container  */
 .shopWrapper{
     display: flex;
     flex-direction: row;
@@ -86,11 +114,22 @@ img{
 
 }
 
+    /* box for each game being solid  */
 .gameBox{
-    padding: 1em;
+    padding: 0;
+    margin: 0;
+    width: 33%;
+    height: 20em;
+    border-bottom: 2px solid #555;
 }
 
 .gameBox:nth-child(2){
-    border-left: 2px solid #555555;
-    border-right: 2px solid #555555;
+    border-left: 2px solid #555;
+    border-right: 2px solid #555;
+    
+}
+
+.gameBox button{
+    width: 30%;
+    margin-left: 35%;
 }
