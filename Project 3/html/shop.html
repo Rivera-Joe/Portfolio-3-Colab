@@ -28,74 +28,7 @@
 <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 
 
-<script>
-
-    function showShop(_clickedElement){
-
-            //hide grid and show shop window
-            $('#grid').hide(1000);
-            $('#shopWindow').show(1000);
-
-            //display the correct window depending on which element was clicked
-            switch(_clickedElement){
-
-            //Genesis shop
-            case 'Genesis':
-
-            //show Genesis
-            $('#Genesis-shop').show();
-            //hide all but Genesis
-            $('#n64-shop').hide();
-            $('#SNES-shop').hide();
-            $('#dreamCast-shop').hide();
-            break;
-
-            //Nintendo 64 shop
-            case 'n64':
-
-            //show n64 shop
-            $('#n64-shop').show();
-
-            //hide all but n64
-            $('#Genesis-shop').hide();
-            $('#SNES-shop').hide();
-            $('#dreamCast-shop').hide();
-            break;
-
-            //Super Nintendo shop
-            case 'SNES':
-
-            //show snes
-            $('#SNES-shop').show();
-
-            //hide all but SNES
-            $('#n64-shop').hide();
-            $('#Genesis-shop').hide();
-            $('#dreamCast-shop').hide();
-            break;
-
-            //Dreamcast shop
-            case 'DreamCast':
-
-            //show dreamcast
-            $('#dreamCast-shop').show();
-
-            //hide all but Dreamcast
-            $('#n64-shop').hide();
-            $('#SNES-shop').hide();
-            $('#Genesis-shop').hide();
-            break;
-
-            default:
-                location.href='shop.html';
-            break;
-
-            }
-
-     $('nav').css('visibility','visible');
-
-    }
-
+<script src="../javascript/main.js">
 </script>
 
 </head>
@@ -172,119 +105,137 @@
             </table>
 
             <div id="shopWindow">
+
+                <!-- Sega Genesis  -->
                 <section id="Genesis-shop">
 
                     <div class="shopWrapper">
+
+                        <!-- NBA Jam  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/nbaJamGen.jpg" alt="NBA Jam Game"/>
                             <figcaption>NBA Jam<br /><br /><span>$29.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('NBAJam')">Add To Cart</button>
                         </div>
 
+                        <!-- Sonic and Knuckles  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/sonicAndKnucklesGen.jpg" alt="Sonic and Knuckles"/>
                             <figcaption>Sonic and Knuckles<br /><br /><span>$39.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('SK')">Add To Cart</button>
                         </div>
 
+                        <!-- Golden Axe  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/goldenAxeGen.jpg" alt="Golden Axe Game"/>
                             <figcaption>Golden Axe<br /><br /><span>$24.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('GA')">Add To Cart</button>
                         </div>
                     </div>
                 </section>
 
+                <!-- Nintendo 64  -->
                 <section id="n64-shop">
                    <div class="shopWrapper">
+                       <!-- Donkey Kong 64 -->
                         <div class="gameBox">
                             <figure>
                               <img src="../images/DK64Large.jpg" alt="Donkey Kong Game"/>
                               <figcaption>Donkey Kong 64<br /><br /><span>$34.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('DK')">Add To Cart</button>
 
                         </div>
 
+                        <!-- Star Fox 64  -->
                         <div class="gameBox">
                             <figure>
                                 <img src="../images/starFox64.jpg" alt="Star Fox 64 Game"/>
                                 <figcaption>Star Fox 64<br /><br /><span>$34.99</span></figcaption>
                             </figure>
-                            <button>Add To Cart</button>
+                            <button onclick='setSessionFunction("SF")'>Add To Cart</button>
                         </div>
 
+                        <!-- Golden Eye 64  -->
                         <div class="gameBox">
                                 <figure>
                                     <img src="../images/goldenEye64.jpg" alt="Golden Eye 64 Game"/>
                                     <figcaption>Golden Eye 64<br /><br /><span>$59.99</span></figcaption>
                                 </figure>
-                                <button>Add To Cart</button>
+                                <button onclick="setSessionFunction('GE')">Add To Cart</button>
                             </div>
 
                     </div>
                 </section>
 
+                <!-- Super Nintendo  -->
                 <section id="SNES-shop">
 
                     <div class="shopWrapper">
+                        <!-- Street Fighter  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/streetFighterSNES.jpg" alt="Street Fighter Game"/>
                             <figcaption>Street Fighter<br /><br /><span>$39.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('StrFtr')">Add To Cart</button>
                         </div>
 
+                        <!-- Mega Man X  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/megaManXSNES.jpg" alt="Mega Man X Game"/>
                             <figcaption>Mega Man X<br /><br /><span>$39.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('MM')">Add To Cart</button>
                         </div>
 
+                        <!-- Super Castlevania  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/superCastleVaniaSNES.jpg" alt="Super Castlevania Game"/>
-                            <figcaption>Super Castlevania IV<br /><span>$34.99</span></figcaption>
+                            <figcaption>Super Castlevania IV<br /><br /><span>$34.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('SC')">Add To Cart</button>
                        </div>
                     </div>
                 </section>
 
+                <!-- DreamCast  -->
                 <section id="dreamCast-shop">
 
                     <div class="shopWrapper">
+                        <!-- Jet Grind Radio  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/jetGrindRadioDC.jpg" alt="Jet Grind Radio DC"/>
                             <figcaption>Jet Grind Radio<br /><br /><span>$24.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('JGR')">Add To Cart</button>
                         </div>
 
+                        <!-- Sonic Adventures  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/sonicAdventureDC.jpg" alt="Sonic Adventure DC"/>
                             <figcaption>Sonic Adventure<br /><br /><span>$34.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('SA')">Add To Cart</button>
                         </div>
 
+                        <!-- Rayman 2  -->
                         <div class="gameBox">
                           <figure>
                             <img src="../images/rayman2DC.jpg" alt="Ray Man 2 DC"/>
                             <figcaption>Rayman 2<br /><br /><span>$29.99</span></figcaption>
                           </figure>
-                          <button>Add To Cart</button>
+                          <button onclick="setSessionFunction('RM2')">Add To Cart</button>
                         </div>
                     </div>
                 </section>
@@ -300,6 +251,7 @@
 
 
 
+    <footer>&copyRetroCorner2019 <span>Project By: Chris Seelbach and Joe Rivera</span></footer>
 </body>
 
 <script>
@@ -310,66 +262,7 @@
     $('#shopWindow').hide();
 
 
-$(function(){
 
-    // // show genesis shop
-    // $('#Genesis-grid').click(function(){
-
-
-    //     $('#grid').toggle(1000);
-    //     $('#shopWindow').toggle(1000);
-    //     $('#n64-shop').toggle();
-    //     $('#SNES-shop').toggle();
-    //     $('#dreamCast-shop').toggle();
-
-    //     $('nav').css('visibility','visible');
-    // })
-
-
-    // // show n64 shop
-    // $('#n64-grid').click(function(){
-
-
-    //     $('#grid').toggle(1000);
-    //     $('#shopWindow').toggle(1000);
-    //     $('#Genesis-shop').toggle();
-    //     $('#SNES-shop').toggle();
-    //     $('#dreamCast-shop').toggle();
-
-    //     $('nav').css('visibility','visible');
-    // })
-
-
-    // // show SNES shop
-    // $('#SNES-grid').click(function(){
-
-
-    //     $('#grid').toggle(1000);
-    //     $('#shopWindow').toggle(1000);
-    //     $('#n64-shop').toggle();
-    //     $('#Genesis-shop').toggle();
-    //     $('#dreamCast-shop').toggle();
-
-    //     $('nav').css('visibility','visible');
-    // })
-
-
-    // // show dreamCast shop
-    // $('#dreamCast-grid').click(function(){
-
-
-    //     $('#grid').toggle(1000);
-    //     $('#shopWindow').toggle(1000);
-    //     $('#n64-shop').toggle();
-    //     $('#SNES-shop').toggle();
-    //     $('#Genesis-shop').toggle();
-
-    //     $('nav').css('visibility','visible');
-    // })
-
-
-
-})
 
 </script>
 
