@@ -1,9 +1,14 @@
 // page for js
+
+
+
 function showShop(_clickedElement){
 
     //hide grid and show shop window
     $('#grid').hide(1000);
     $('#shopWindow').show(1000);
+
+    $('#aside').css('height', '16.45em');
 
     //display the correct window depending on which element was clicked
     switch(_clickedElement){

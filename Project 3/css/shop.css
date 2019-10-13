@@ -120,7 +120,7 @@ aside{
     padding: 0;
     margin: 0;
     width: 33%;
-    height: 24.6em;
+    height: 24.7em;
     border-bottom: 2px solid #555;
 }
 
@@ -146,7 +146,7 @@ footer{
     
     width: 100%;
     margin-bottom: 0;
-    margin-top: 9em;
+    margin-top: 20em;
     padding-left: 2em;
     background-color: #000;
     color: #fff;
@@ -155,5 +155,22 @@ footer{
 footer > span{
     position: absolute;
     right: 2em;
+
+}
+
+
+aside{
+    font-size: 1.5em;
+    align-self: flex-start;
+    padding: .5em;
+    margin-top: 4.65em;
+    border: .2em solid #000;
+    height: 24.7em;
+}
+
+.gameBox > figure:hover{
+
+    cursor: pointer;
+    background-color: #e0e0e0;
 
 }
