@@ -9,6 +9,7 @@ function showShop(_clickedElement){
     $('#shopWindow').show(1000);
 
     $('#aside').css('height', '16.45em');
+    $('#aside').css('overflow-y', 'auto');
 
     //display the correct window depending on which element was clicked
     switch(_clickedElement){
