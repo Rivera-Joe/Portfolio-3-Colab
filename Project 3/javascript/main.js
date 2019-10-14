@@ -1,16 +1,22 @@
 // page for js
-
+var count = 0;
 
 
 function showShop(_clickedElement){
+
 
     //hide grid and show shop window
     $('#grid').hide(1000);
     $('#shopWindow').show(1000);
 
-    $('#inform').hide(1000);
-    $('#inform').show(1000);
-    $('#inform').html('Click a game photo for more information!');
+    //keeps inform header from re-animating on every click
+    if(count == 0){
+        $('#inform').hide(1000);
+        $('#inform').show(1000);
+        $('#inform').html('Click a game photo for more information!');
+        count++;
+    }
+    
     
 
     $('#policy').css('height', '16.45em');
