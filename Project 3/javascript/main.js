@@ -8,6 +8,11 @@ function showShop(_clickedElement){
     $('#grid').hide(1000);
     $('#shopWindow').show(1000);
 
+    $('#inform').hide(1000);
+    $('#inform').show(1000);
+    $('#inform').html('Click a game photo for more information!');
+    
+
     $('#policy').css('height', '16.45em');
     $('#policy').css('overflow-y', 'auto');
 
