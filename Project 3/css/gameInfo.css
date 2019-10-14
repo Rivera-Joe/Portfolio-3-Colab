@@ -3,12 +3,13 @@ body{
 }
 main{
     width: 100%;
+    
 }
 
 section{
     border: .2em solid #000;
 
-    width: 40%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
 
@@ -16,6 +17,7 @@ section{
 
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    background-color: #555;
 
 }
 
@@ -36,7 +38,7 @@ section > p,figure{
 }
 img{
     width: 100%;
-    height: 15em;
+    height: auto;
 }
 
 
@@ -54,4 +56,31 @@ footer > span{
     position: absolute;
     right: 2em;
 
+}
+
+#box{
+    position: absolute;
+    top: 7em;
+    background-color: #333;
+}
+
+ section > #imgBox{
+     margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: space-evenly;
+}
+
+#imgBox > img{
+    width: 30%;
+    height: auto;
+}
+
+#imgBox > img:hover{
+    transform: scale(1.5);
 }
