@@ -32,7 +32,7 @@ body{
 #nav > div:hover{
     background-color: #cf4c4c;
 }
-aside{
+#policy{
     flex: 1;
     margin-left: .5em;
     margin-right: .5em;
@@ -159,7 +159,7 @@ footer > span{
 }
 
 
-aside{
+#policy{
     font-size: 1.5em;
     align-self: flex-start;
     padding: .5em;

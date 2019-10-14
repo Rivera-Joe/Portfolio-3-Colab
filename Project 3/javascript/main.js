@@ -8,8 +8,8 @@ function showShop(_clickedElement){
     $('#grid').hide(1000);
     $('#shopWindow').show(1000);
 
-    $('#aside').css('height', '16.45em');
-    $('#aside').css('overflow-y', 'auto');
+    $('#policy').css('height', '16.45em');
+    $('#policy').css('overflow-y', 'auto');
 
     //display the correct window depending on which element was clicked
     switch(_clickedElement){

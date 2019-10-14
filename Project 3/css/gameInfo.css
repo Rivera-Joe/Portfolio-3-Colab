@@ -1,15 +1,12 @@
 body{
     font-family: 'Orbitron', sans-serif;
 }
-main{
-    width: 100%;
-    
-}
+
 
 section{
     border: .2em solid #000;
 
-    width: 55%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 
@@ -73,7 +70,7 @@ footer > span{
     background-color: #333;
 }
 
- section > #imgBox{
+section > .imgBox{
      margin-top: 1em;
     display: flex;
     flex-direction: row;
@@ -85,11 +82,11 @@ footer > span{
     justify-content: space-evenly;
 }
 
-#imgBox > img{
+.imgBox > img{
     width: 30%;
     height: auto;
 }
 
-#imgBox > img:hover{
+.imgBox > img:hover{
     transform: scale(1.5);
 }
