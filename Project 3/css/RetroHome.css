@@ -28,7 +28,7 @@ background-repeat: no-repeat;
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 57%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -53,11 +53,12 @@ background-repeat: no-repeat;
 
 /* Caption text */
 .text {
-  color: orange;
+  color: #ffa500;
   font-size: 15px;
-  padding: 8px 12px;
+  /*added 8TB*/
+  padding-left; 15px;
   position: absolute;
-  bottom: 8px;
+  bottom: 210px;
   width: 100%;
   text-align: center;
   font-family: "verdana";
