@@ -56,7 +56,7 @@ background-repeat: no-repeat;
   color: #ffa500;
   font-size: 15px;
   /*added 8TB*/
-  padding-left; 15px;
+  padding-left: 15px;
   position: absolute;
   bottom: 210px;
   width: 100%;
@@ -119,6 +119,8 @@ background-repeat: no-repeat;
   display: inline;
 }
 
+
+
 .Adventure {
   padding-top: 50px;
   background-color: green;
@@ -127,7 +129,7 @@ background-repeat: no-repeat;
   height: 80%;
   position: relative;
   float: left;
-  left: 20%;
+  left: 10%;
   display: inline;
 }
 
@@ -140,7 +142,7 @@ background-repeat: no-repeat;
   position: relative;
   display: inline;
   float: left;
-  left: 40%;
+  left: 15%;
 }
 
 
@@ -181,7 +183,7 @@ background-repeat: no-repeat;
   }
   
   a:visited { 
-  color:#ff0000;
+  color:#000000;
   }
   
   a:hover {
