@@ -90,6 +90,7 @@ section > .imgBox{
 .imgBox > img{
     width: 30%;
     height: auto;
+	max-height: 13em;
 }
 
 .imgBox > img:hover{
